@@ -1,4 +1,4 @@
-{% extends 'eshop/base.html' %}
+ {% extends 'eshop/base.html' %}
 
 {% block title %}home{% endblock title %}
 
@@ -57,18 +57,7 @@ padding-right: 0;
         <div class="container carousel-inner no-padding">
 
             <div class="carousel-item active">
-                <div class="col-xs-3 col-sm-3 col-md-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src='/media/{{products.0.image}}' class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">{{products.0.product_name}}</h5>
-                            <h3 class="card-title">{{products.0.price}}</h3>
-                            <p class="card-text">{{products.0.description}}</p>
-                            <button id="pr{{i.product_id}}" class="btn btn-primary cart">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-                {% for i in products|slice:"1:"%}
+                {% for i in products%}
                 <div class="col-xs-3 col-sm-3 col-md-3">
                     <div class="card" style="width: 18rem;">
                         <img src='/media/{{i.image}}' class="card-img-top" alt="...">
@@ -80,7 +69,7 @@ padding-right: 0;
                         </div>
                     </div>
                 </div>
-                {% if forloop.counter|divisibleby:3 and forloop.counter > 0 and not forloop.last %}
+                {% if forloop.counter|divisibleby:4 and forloop.counter > 0 and not forloop.last %}
             </div>
             <div class="carousel-item">
                 {% endif %}
