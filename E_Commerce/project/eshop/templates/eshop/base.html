@@ -17,7 +17,7 @@
 <body>
     {% load static %}
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">ESHOP.com</a>
+        <a class="navbar-brand" href="/eshop">ESHOP.com</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -26,19 +26,28 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/eshop">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Product</a>
+                    <a class="nav-link" href="/eshop/about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Cart(<span id="cart">0</span>)</a>
+                    <a class="nav-link" href="/eshop/tracker">Tracker</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="/eshop/products">Product</a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/eshop/contact">Contact</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
+            <button type="button" class="btn btn-secondary mx-2" id="popcart"  data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-html="true" data-bs-content="Bottom popover">
+                Cart(<span id="cart">0</span>)
+            </button>
         </div>
     </nav>
 
